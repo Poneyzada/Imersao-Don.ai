@@ -56,17 +56,17 @@
     <!-- SEÇÃO 1: HERO (A Cena de Abertura) -->
     <section class="min-h-[100dvh] relative flex border-b border-white/5 items-end pb-10 overflow-hidden isolate bg-black">
         <canvas id="hero-webgl-canvas" class="absolute inset-0 w-full h-full object-cover touch-none z-[1]"></canvas>
-        <div class="absolute inset-0 bg-void/40 z-[2]"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-transparent z-[2]"></div>
+        <div class="absolute inset-0 bg-void/20 z-[2]"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent z-[2]"></div>
         
         <!-- Hero Photo as Cinematic Background Element (PC) -->
         <div class="absolute inset-0 right-[2%] hidden lg:flex pointer-events-none items-center justify-end z-[5] floating-hologram">
             <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" fetchpriority="high" class="w-1/2 h-[90%] object-contain object-bottom grayscale-[20%] opacity-90" style="-webkit-mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%); mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%);">
         </div>
         
-        <!-- Hero Photo as Edge-to-Edge Backdrop (MOBILE) -->
-        <div class="absolute inset-x-0 bottom-0 h-[65%] flex lg:hidden pointer-events-none items-end justify-center z-[5] floating-hologram overflow-hidden">
-            <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" fetchpriority="high" class="w-full h-full object-cover object-top grayscale-[20%] opacity-35" style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 80%, transparent 100%);">
+        <!-- Hero Photo as Edge-to-Edge Full Backdrop (MOBILE) -->
+        <div class="absolute inset-0 flex lg:hidden pointer-events-none items-start justify-center z-[5] floating-hologram overflow-hidden">
+            <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" fetchpriority="high" class="w-full h-full object-cover object-top grayscale-[20%] opacity-40" style="-webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 75%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 75%, transparent 100%);">
         </div>
         
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
