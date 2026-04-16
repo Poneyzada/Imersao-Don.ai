@@ -67,14 +67,14 @@
         <div class="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-transparent z-[2]"></div>
         
         <!-- Hero Photo as Cinematic Background Element -->
-        <div class="absolute inset-0 right-0 lg:right-[2%] flex pointer-events-none items-start lg:items-center justify-end z-[5] floating-hologram">
-            <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" class="w-[90%] lg:w-1/2 h-[60%] lg:h-[90%] object-contain object-right-top lg:object-bottom grayscale-[20%] opacity-20 lg:opacity-90" style="-webkit-mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%); mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%);">
+        <div class="absolute inset-0 right-[2%] hidden lg:flex pointer-events-none items-center justify-end z-[5] floating-hologram">
+            <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" class="w-1/2 h-[90%] object-contain object-bottom grayscale-[20%] opacity-90" style="-webkit-mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%); mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%);">
         </div>
         
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <!-- Conteúdo no terço inferior esquerdo conforme Design System -->
-            <div class="lg:w-2/3 flex flex-col items-start text-left pt-24 pb-0 relative z-20">
-                <div class="flex flex-wrap gap-3 mb-6 mt-12">
+            <div class="lg:w-2/3 flex flex-col items-start text-left pt-16 lg:pt-24 pb-0 relative z-20">
+                <div class="flex flex-wrap gap-3 mb-4 mt-8 lg:mt-12">
                     <div class="hero-tag inline-flex items-center gap-2 border border-matrix text-matrix text-[10px] md:text-xs font-bold uppercase px-4 py-1.5 rounded-full relative overflow-hidden bg-matrix/5">
                         <i data-lucide="calendar" class="w-3 h-3"></i> 02 E 16 DE MAIO DE 2026 <span class="mx-1 text-white/30">·</span> SP
                     </div>
@@ -89,12 +89,17 @@
                     <span class="text-6xl md:text-8xl lg:text-[7rem] font-black text-electric drop-shadow-xl">Libertar.</span>
                 </h1>
                 
-                <p class="hero-sub text-base md:text-lg text-lightgray leading-relaxed mb-8 max-w-2xl font-medium relative z-30 mt-4">
+                <p class="hero-sub text-sm md:text-lg text-lightgray leading-relaxed mb-4 max-w-2xl font-medium relative z-30 mt-4">
                     Você vai sair dessa imersão sabendo exatamente como aplicar IA no seu consultório, economizar horas por dia e escalar receita — sem aumentar um único paciente na agenda.
                 </p>
                 
-                <div class="hero-cta flex flex-col sm:flex-row gap-6 w-full sm:w-auto items-center relative z-30 mt-6">
-                    <a href="javascript:openIcpModal()" class="bg-matrix text-void font-black uppercase py-4 px-10 rounded-full text-base md:text-lg btn-magnetic shadow-[0_0_30px_rgba(0,255,65,0.4)] text-center">
+                <!-- MOBILE EXCLUSIVE: Hero Photo placed exactly between Copy and CTA as requested -->
+                <div class="flex lg:hidden w-full justify-center items-center my-2 relative z-10 floating-hologram pointer-events-none">
+                    <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" class="w-[85%] max-w-[220px] object-contain grayscale-[20%] opacity-90 drop-shadow-[0_0_30px_rgba(0,255,65,0.15)]" style="-webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
+                </div>
+
+                <div class="hero-cta flex flex-col sm:flex-row gap-6 w-full sm:w-auto items-center relative z-30 mt-4">
+                    <a href="javascript:openIcpModal()" class="bg-matrix text-void font-black uppercase py-4 px-10 rounded-full text-base md:text-lg btn-magnetic shadow-[0_0_30px_rgba(0,255,65,0.4)] text-center w-full sm:w-auto">
                         → INICIAR TRIAGEM (GARANTIR VAGA)
                     </a>
                 </div>
