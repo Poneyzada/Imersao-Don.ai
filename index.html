@@ -103,7 +103,7 @@
     </section>
 
     <!-- SEÇÃO 2: DOR (O Manifesto / Split Text) -->
-    <section id="dor" class="py-32 bg-void relative">
+    <section id="dor" class="py-16 md:py-32 bg-void relative">
         <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'); background-size: cover; background-attachment: fixed;"></div>
         
         <div class="container mx-auto px-6 max-w-6xl relative z-10 text-center gsap-fade-up">
@@ -111,12 +111,12 @@
                 A REALIDADE QUE NINGUÉM FALA EM CONGRESSO
             </div>
             
-            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight mb-20 mx-auto max-w-4xl text-white">
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight mb-12 md:mb-20 mx-auto max-w-4xl text-white">
                 VOCÊ É UM DOS MÉDICOS MAIS QUALIFICADOS DO PAÍS. E AINDA ASSIM, <span class="text-red-500 line-through decoration-white/30 decoration-8">ESTÁ PRESO.</span>
             </h2>
             
             <!-- Pain points Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 gsap-stagger-container text-left mb-24">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 gsap-stagger-container text-left mb-12 md:mb-24">
                 <div class="dark-glass p-8 rounded-[2rem] stagger-item hover:border-matrix/40 transition-colors transform">
                     <h3 class="text-xl font-bold mb-3 text-white flex items-center gap-2"><i data-lucide="clock-4" class="text-matrix w-5 h-5"></i> Prontuários Intermináveis</h3>
                     <p class="text-lightgray leading-relaxed text-sm">Atende 15 pacientes por dia e gasta mais de 3 horas isolado apenas digitando relatórios.</p>
@@ -144,7 +144,7 @@
     </section>
 
     <!-- SEÇÃO 3: MÉTODO -->
-    <section id="metodo" class="py-24 bg-[#030303] relative border-y border-white/10">
+    <section id="metodo" class="py-16 md:py-24 bg-[#030303] relative border-y border-white/10">
         <div class="container mx-auto px-6 max-w-5xl relative z-10 gsap-fade-up">
             <h2 class="text-4xl md:text-5xl font-black uppercase text-center tracking-tight text-white mb-16">
                 NÃO É CURSO DE IA. É IA APLICADA POR MÉDICO, PARA MÉDICO.
@@ -177,13 +177,13 @@
     <!-- SEÇÃO 4: AS 5 APLICAÇÕES (STICKY STACKING GSAP) -->
     <section id="aplicacoes" class="bg-void relative border-b border-white/5">
         
-        <!-- Pinned Container Controller -->
-        <div class="sticky-pin-wrapper hidden md:block">
+        <!-- Unified Application Container (Scrolling naturally on mobile, Sticky on PC) -->
+        <div class="sticky-pin-wrapper">
             <!-- This structure will be handled by GSAP ScrollTrigger pinning -->
             
             <!-- STACK CARD 1: Pré-Consulta -->
-            <div class="stack-card sticky top-0 h-screen w-full flex items-center justify-center p-6 border-b border-white/5" id="stack-card-1">
-                <div class="max-w-6xl w-full dark-glass border border-matrix/30 rounded-[3rem] p-12 grid lg:grid-cols-2 gap-12 items-center shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden bg-void">
+            <div class="stack-card sticky top-0 min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-6 border-b border-white/5" id="stack-card-1">
+                <div class="max-w-6xl w-full dark-glass border border-matrix/30 rounded-[3rem] p-8 md:p-12 grid lg:grid-cols-2 gap-8 md:gap-12 items-center shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden bg-void">
                     <!-- Card Background Number -->
                     <div class="absolute top-4 right-10 pointer-events-none select-none z-0">
                         <span class="text-[14rem] font-black text-white/5 tracking-tighter leading-none opacity-50 blur-[2px]">01</span>
@@ -195,15 +195,15 @@
                         <p class="text-matrix font-bold"><i data-lucide="zap" class="inline w-4 h-4 mr-1"></i> Menos anamnese robótica. Mais medicina.</p>
                     </div>
                     <!-- Interaction UX: Diagnostic Shuffler -->
-                    <div class="relative h-[300px] shuffler-placeholder w-full flex justify-center items-center">
+                    <div class="relative h-[250px] md:h-[300px] shuffler-placeholder w-full flex justify-center items-center">
                         <!-- Cards are inserted via JS -->
                     </div>
                 </div>
             </div>
 
             <!-- STACK CARD 2: Transcrição -->
-            <div class="stack-card sticky top-0 h-screen w-full flex items-center justify-center p-6 border-b border-white/5" id="stack-card-2">
-                <div class="max-w-6xl w-full dark-glass border border-matrix/30 rounded-[3rem] p-12 grid lg:grid-cols-2 gap-12 items-center shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden bg-void">
+            <div class="stack-card sticky top-0 min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-6 border-b border-white/5" id="stack-card-2">
+                <div class="max-w-6xl w-full dark-glass border border-matrix/30 rounded-[3rem] p-8 md:p-12 grid lg:grid-cols-2 gap-8 md:gap-12 items-center shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden bg-void">
                     <!-- Card Background Number -->
                     <div class="absolute top-4 right-10 pointer-events-none select-none z-0">
                         <span class="text-[14rem] font-black text-white/5 tracking-tighter leading-none opacity-50 blur-[2px]">02</span>
@@ -215,7 +215,7 @@
                         <p class="text-electric font-bold uppercase tracking-widest text-sm border-l-2 border-electric pl-3 py-1">Consulta de 40min ➔ 15min.<br>Devolve 3h líquidas/dia.</p>
                     </div>
                     <!-- Interaction UX: Telemetry Typewriter -->
-                    <div class="bg-black border border-white/10 rounded-2xl p-6 h-[300px] w-full font-mono text-sm relative overflow-hidden flex flex-col pt-10">
+                    <div class="bg-black border border-white/10 rounded-2xl p-4 md:p-6 h-[250px] md:h-[300px] w-full font-mono text-xs md:text-sm relative overflow-hidden flex flex-col pt-10">
                         <div class="absolute top-0 left-0 w-full bg-white/5 border-b border-white/10 px-4 py-2 flex items-center gap-2">
                             <i data-lucide="mic" class="w-3 h-3 text-red-500 animate-pulse"></i> <span class="text-[10px] text-lightgray">Listening Protocol...</span>
                         </div>
@@ -225,8 +225,8 @@
             </div>
 
             <!-- STACK CARD 3: Pós-Consulta Automática -->
-            <div class="stack-card sticky top-0 h-screen w-full flex items-center justify-center p-6 border-b border-white/5" id="stack-card-3">
-                <div class="max-w-6xl w-full dark-glass border border-matrix/30 rounded-[3rem] p-12 grid lg:grid-cols-2 gap-12 items-center shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden bg-void">
+            <div class="stack-card sticky top-0 min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-6 border-b border-white/5" id="stack-card-3">
+                <div class="max-w-6xl w-full dark-glass border border-matrix/30 rounded-[3rem] p-8 md:p-12 grid lg:grid-cols-2 gap-8 md:gap-12 items-center shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden bg-void">
                     <!-- Card Background Number -->
                     <div class="absolute top-4 right-10 pointer-events-none select-none z-0">
                         <span class="text-[14rem] font-black text-white/5 tracking-tighter leading-none opacity-50 blur-[2px]">03</span>
@@ -237,7 +237,7 @@
                         <p class="text-lightgray text-lg mb-8 leading-relaxed">Retenção de ouro. O paciente recebe um follow-up autônomo formatado lindamente via WhatsApp para documentar o antes/depois da dor. Ele visualiza a cura. Você conquista o LTV.</p>
                     </div>
                     <!-- Interaction UX: Cursor Protocol Scheduler Mock -->
-                    <div class="relative h-[300px] w-full bg-[#050505] rounded-2xl border border-white/5 flex flex-col justify-center items-center overflow-hidden" id="scheduler-container">
+                    <div class="relative h-[250px] md:h-[300px] w-full bg-[#050505] rounded-2xl border border-white/5 flex flex-col justify-center items-center overflow-hidden" id="scheduler-container">
                         <div class="grid grid-cols-7 gap-2 w-full px-8 text-center text-xs text-lightgray font-mono mb-4">
                             <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
                         </div>
@@ -253,17 +253,17 @@
             </div>
 
             <!-- Apps 4 & 5 (Combined for brevity) -->
-            <div class="stack-card sticky top-0 h-screen w-full flex items-center justify-center p-6 border-b border-white/5" id="stack-card-4">
-                <div class="max-w-6xl w-full grid grid-cols-2 gap-6 relative overflow-hidden">
+            <div class="stack-card sticky top-0 min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-6 border-b border-white/5" id="stack-card-4">
+                <div class="max-w-6xl w-full grid md:grid-cols-2 gap-6 relative overflow-hidden">
                     <!-- 4 -->
-                    <div class="dark-glass border border-matrix/30 rounded-[3rem] p-10 bg-void relative">
+                    <div class="dark-glass border border-matrix/30 rounded-[3rem] p-8 md:p-10 bg-void relative">
                         <span class="text-[8rem] font-black text-white/5 absolute top-2 right-4 tracking-tighter leading-none z-0 pointer-events-none opacity-50 blur-[2px]">04</span>
                         <h3 class="text-3xl font-black uppercase text-white mb-4"><span class="text-matrix">Marketing</span> com IA</h3>
                         <p class="text-lightgray mb-6">Landing page, artigos SEO e presença digital gerados em 3 cliques. Presença forte, zero agências caríssimas.</p>
                         <a href="javascript:openIcpModal()" class="bg-white/5 border border-white/10 px-6 py-3 rounded-xl font-bold uppercase text-xs inline-flex items-center hover:bg-matrix/20 transition-all btn-magnetic">Garantir Vaga <i data-lucide="arrow-right" class="w-3 h-3 ml-2"></i></a>
                     </div>
                     <!-- 5 -->
-                    <div class="dark-glass border border-electric/40 rounded-[3rem] p-10 bg-void relative">
+                    <div class="dark-glass border border-electric/40 rounded-[3rem] p-8 md:p-10 bg-void relative">
                         <span class="text-[8rem] font-black text-white/5 absolute top-2 right-4 tracking-tighter leading-none z-0 pointer-events-none opacity-50 blur-[2px]">05</span>
                         <h3 class="text-3xl font-black uppercase text-white mb-4"><span class="text-electric">Dashboard</span> Clínica</h3>
                         <p class="text-lightgray mb-6">Integração API total. Agendamentos, NPS, Faturamento — quebra de silos de sistemas caros em 1 tela na sua mão.</p>
@@ -272,24 +272,10 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Fallback for Application section (Stacks naturally) -->
-        <div class="md:hidden py-24 container mx-auto px-6 space-y-8">
-            <h2 class="text-4xl font-black uppercase text-white mb-10 text-center tracking-tight">5 APLICAÇÕES DEMONSTRADAS AO VIVO</h2>
-            <!-- Just static cards for mobile speed -->
-            <div class="dark-glass p-8 rounded-3xl border-matrix/20"><h3 class="text-xl font-black text-matrix uppercase mb-2">01. Pré-Consulta</h3><p class="text-lightgray text-sm">Menos roteiro robótico, mais empatia direta ao ponto mediado pelo quiz da AI.</p></div>
-            <div class="dark-glass p-8 rounded-3xl border-matrix/20"><h3 class="text-xl font-black text-matrix uppercase mb-2">02. Transcrição Prontuário</h3><p class="text-lightgray text-sm">De 40min para 15min. Evolução ditada passivamente.</p></div>
-            <div class="dark-glass p-8 rounded-3xl border-matrix/20"><h3 class="text-xl font-black text-matrix uppercase mb-2">03. Pós-Consulta Autônoma</h3><p class="text-lightgray text-sm">Retenção massiva e visualização do LTV.</p></div>
-            <div class="dark-glass p-8 rounded-3xl border-electric/40"><h3 class="text-xl font-black text-electric uppercase mb-2">04 + 05. Marketing & Dashboard</h3><p class="text-lightgray text-sm">Dados e captação na ponta dos dedos aposentando licenças abusivas.</p></div>
-            <div class="text-center mt-8">
-                <a href="javascript:openIcpModal()" class="bg-electric text-white font-bold uppercase py-4 px-8 rounded-full text-base block shadow-[0_0_15px_rgba(255,107,0,0.4)] btn-magnetic">Garantir Vaga — R$ 147</a>
-            </div>
-        </div>
-
     </section>
 
     <!-- SEÇÃO 5: AUTORIDADE -->
-    <section id="autoridade" class="py-32 bg-[#020202] relative border-b border-lightgray/10">
+    <section id="autoridade" class="py-16 md:py-32 bg-[#020202] relative border-b border-lightgray/10">
         <div class="container mx-auto px-6 max-w-6xl relative z-10 gsap-fade-up">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative hidden lg:flex h-full min-h-[600px] pointer-events-none items-center justify-center">
@@ -312,13 +298,13 @@
     </section>
 
     <!-- SEÇÃO 6: TRANSFORMAÇÃO & OBJEÇÕES -->
-    <section class="py-24 bg-void relative">
+    <section class="py-16 md:py-24 bg-void relative">
         <div class="container mx-auto px-6 max-w-4xl relative z-10 gsap-fade-up">
             <h2 class="text-4xl md:text-6xl font-extrabold text-white text-center mb-16">
                 A Grande Transição <span class="font-bold text-matrix text-3xl md:text-4xl block mt-4 uppercase drop-shadow-lg">Método vs Magia</span>
             </h2>
 
-            <div class="space-y-4 mb-24">
+            <div class="space-y-4 mb-12 md:mb-24">
                 <!-- OBJEÇÃO 1 -->
                 <div class="accordion-wrapper dark-glass rounded-[2rem] overflow-hidden border-l-4 border-l-electric">
                     <button class="w-full text-left px-8 py-6 font-bold text-lg md:text-xl text-white uppercase flex justify-between items-center outline-none">
@@ -356,7 +342,7 @@
     </section>
 
     <!-- SEÇÃO 8: OFERTA & CTA MATRIX FINAL -->
-    <section id="oferta" class="py-32 bg-[#020202] relative overflow-hidden" style="background-image: radial-gradient(circle at top, rgba(0,255,65,0.06), #020202 70%);">
+    <section id="oferta" class="py-16 md:py-32 bg-[#020202] relative overflow-hidden" style="background-image: radial-gradient(circle at top, rgba(0,255,65,0.06), #020202 70%);">
         <!-- Giant Background Watermark (O Fundão Desbravado) -->
         <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none z-0">
             <img src="BM_D1_LOGO-34.jpg" alt="Background Watermark" class="w-full max-w-[1000px] object-cover grayscale blur-[15px] transform scale-150">
