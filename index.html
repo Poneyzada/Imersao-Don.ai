@@ -29,15 +29,8 @@
     <!-- Typography: Inter for solid UI, Instrument Serif for Italic Drama -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css?v=3">
-    
-    <!-- GSAP & ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body class="bg-void text-white font-sans overflow-x-hidden antialiased selection:bg-matrix selection:text-void relative">
 
@@ -68,7 +61,7 @@
         
         <!-- Hero Photo as Cinematic Background Element -->
         <div class="absolute inset-0 right-[2%] hidden lg:flex pointer-events-none items-center justify-end z-[5] floating-hologram">
-            <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" class="w-1/2 h-[90%] object-contain object-bottom grayscale-[20%] opacity-90" style="-webkit-mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%); mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%);">
+            <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" fetchpriority="high" class="w-1/2 h-[90%] object-contain object-bottom grayscale-[20%] opacity-90" style="-webkit-mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%); mask-image: radial-gradient(ellipse at 60% 50%, black 40%, transparent 80%);">
         </div>
         
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
@@ -95,7 +88,7 @@
                 
                 <!-- MOBILE EXCLUSIVE: Hero Photo placed exactly between Copy and CTA as requested -->
                 <div class="flex lg:hidden w-full justify-center items-center my-3 relative z-10 floating-hologram pointer-events-none">
-                    <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" class="w-[85%] max-w-[280px] object-contain grayscale-[20%] opacity-90 drop-shadow-[0_0_30px_rgba(0,255,65,0.15)]" style="-webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
+                    <img src="IMG_4544.PNG" alt="Don.ai Médico Tech" fetchpriority="high" class="w-[85%] max-w-[280px] object-contain grayscale-[20%] opacity-90 drop-shadow-[0_0_30px_rgba(0,255,65,0.15)]" style="-webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
                 </div>
 
                 <div class="hero-cta flex flex-col sm:flex-row gap-6 w-full sm:w-auto items-center relative z-30 mt-4">
@@ -284,7 +277,7 @@
         <div class="container mx-auto px-6 max-w-6xl relative z-10 gsap-fade-up">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 <div class="relative flex h-[350px] lg:h-full lg:min-h-[600px] pointer-events-none items-center justify-center order-first lg:order-none -mt-4 lg:-mt-0 mb-ring lg:mb-0">
-                    <img src="IMG_4547.PNG" alt="Dr. Don Martins" class="w-[140%] lg:w-[120%] h-[140%] lg:h-[120%] object-contain object-top lg:object-center opacity-80 lg:opacity-90 grayscale-[20%] transition-transform duration-700" style="-webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 75%); mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 75%);">
+                    <img src="IMG_4547.PNG" alt="Dr. Don Martins" loading="lazy" decoding="async" class="w-[140%] lg:w-[120%] h-[140%] lg:h-[120%] object-contain object-top lg:object-center opacity-80 lg:opacity-90 grayscale-[20%] transition-transform duration-700" style="-webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 75%); mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 75%);">
                 </div>
                 <div>
                     <h2 class="text-4xl md:text-5xl font-black uppercase text-white mb-10 tracking-tight leading-tight">
@@ -350,7 +343,7 @@
     <section id="oferta" class="py-16 md:py-32 bg-[#020202] relative overflow-hidden" style="background-image: radial-gradient(circle at top, rgba(0,255,65,0.06), #020202 70%);">
         <!-- Giant Background Watermark (O Fundão Desbravado) -->
         <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none z-0">
-            <img src="BM_D1_LOGO-34.jpg" alt="Background Watermark" class="w-full max-w-[1000px] object-cover grayscale blur-[15px] transform scale-150">
+            <img src="BM_D1_LOGO-34.jpg" alt="Background Watermark" loading="lazy" decoding="async" class="w-full max-w-[1000px] object-cover grayscale blur-[15px] transform scale-150">
         </div>
 
         <div class="container mx-auto px-6 max-w-3xl relative z-10 text-center gsap-fade-up">
@@ -476,7 +469,9 @@
         </div>
     </div>
 
-    <!-- Essential Setup Script Integration -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="main.js?v=3"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
